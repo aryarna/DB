@@ -3,88 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doublepro</title>
+    <title>Register - Satta Website</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-
-    <link href="style.css" rel="stylesheet">
-    <style>
-        /* Custom CSS for Footer */
-        .footer {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 30px 0;
-            font-size: 14px;
-        }
-
-        .footer .footer-links a {
-            color: #ffffff;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer .footer-links a:hover {
-            color: #007bff;
-        }
-
-        .footer .about-us,
-        .footer .contact-us {
-            margin-bottom: 20px;
-        }
-
-        .footer .social-icons a {
-            font-size: 18px;
-            color: #ffffff;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .footer .social-icons a:hover {
-            color: #007bff;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="home.html">Double Pro.</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="home.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="register.html">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html">Profile</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
     <div class="container my-5">
         <h1 class="text-center">Register</h1>
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form id="registerForm">
+                <form id="registrationForm">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" class="form-control" id="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -94,52 +25,19 @@
                         <label for="phone">Phone Number</label>
                         <input type="text" class="form-control" id="phone" required>
                     </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
                     <button type="submit" class="btn btn-primary">Register</button>
                 </form>
+                <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
+                    Registration successful! Please log in.
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 about-us">
-                    <h5>About Us</h5>
-                    <p>Doublepro is your trusted platform for playing games responsibly. Join us to experience the thrill and excitement while playing smartly.</p>
-                </div>
-                <div class="col-md-4 contact-us">
-                    <h5>Contact Us</h5>
-                    <p><i class="fas fa-envelope"></i> info@doublepro.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> 132 Main Street, Noida, India</p>
-                </div>
-                <div class="col-md-4 social-icons">
-                    <h5>Follow Us</h5>
-                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://wa.me/8521284071" target="8521284071"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="list-inline footer-links">
-                        <li class="list-inline-item"><a href="#">Home</a></li>
-                        <li class="list-inline-item"><a href="#">Features</a></li>
-                        <li class="list-inline-item"><a href="#">Contact</a></li>
-                        <li class="list-inline-item"><a href="#">Winners</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <p class="text-right">&copy; 2024 Doublepro. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="register.js"></script>
 </body>
 </html>

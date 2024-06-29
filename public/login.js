@@ -1,24 +1,18 @@
-$(document).ready(function() {
-    $('#loginForm').on('submit', function(event) {
-        event.preventDefault();
-        const username = $('#username').val();
-        const password = $('#password').val();
-        const userData = localStorage.getItem(username);
-        const loginMessage = $('#loginMessage');
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        if (!userData) {
-            loginMessage.text('User does not exist. Please register first.').css('color', 'red');
-        } else {
-            const user = JSON.parse(userData);
-            if (user.password === password) {
-                loginMessage.text('Login successful! Redirecting to home page...').css('color', 'green');
-                localStorage.setItem('loggedInUser', username);
-                setTimeout(function() {
-                    window.location.href = 'home.html';
-                }, 2000);
-            } else {
-                loginMessage.text('Incorrect password. Please try again.').css('color', 'red');
-            }
-        }
-    });
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    const userData = JSON.parse(localStorage.getItem(username));
+
+    if (userData && userData.password === password) {
+        sessionStorage.setItem('loggedInUser', username);
+        document.getElementById('successMessage').style.display = 'block';
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 2000);
+    } else {
+        document.getElementById('errorMessage').style.display = 'block';
+    }
 });
