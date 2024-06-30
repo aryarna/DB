@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const formRoutes = require('./routes/formRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 3000 ;
+const PORT = process.env.PORT || 12000 ;
 
 
 db();
