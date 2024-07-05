@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "app.js",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "destination":"public/index.html"
+  }
+}
